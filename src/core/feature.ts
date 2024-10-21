@@ -14,8 +14,8 @@ export interface FeatureStore<T extends object = object>
   activate: () => void;
   getState: () => T;
   setState: (state: T | Partial<T>, replace?: boolean) => void;
+  persistState: () => void;
   useStore: () => T;
-  persist: () => void;
 }
 
 const featureStores: FeatureStore[] = [];
@@ -61,7 +61,7 @@ export function registerFeature<T extends object>(
     }
   };
 
-  const persist = () => {
+  const persistState = () => {
     const storage = getLocalStorage(Config.instance.name);
     if (storage && featureOptions.saveState) {
       featureOptions.saveState(storage);
@@ -73,7 +73,7 @@ export function registerFeature<T extends object>(
     activate,
     getState,
     setState,
+    persistState,
     useStore: useFeatureStore,
-    persist,
   };
 }
