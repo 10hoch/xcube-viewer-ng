@@ -5,6 +5,10 @@ import Sidebar from "@/features/sidebar/components/Sidebar";
 import { sidebarStore } from "@/features/sidebar/store";
 import * as actions from "@/features/sidebar/actions";
 
+/*
+We mock the Config as it is required by the persistState() method in the
+core/feature.ts when the setSidebarPanelId() is called
+*/
 vi.mock("@/config", () => {
   return {
     Config: {
