@@ -68,7 +68,7 @@ export function registerFeature<T extends object>(
     }
   };
 
-  return {
+ const featureStore = {
     ...featureOptions,
     activate,
     getState,
@@ -76,4 +76,8 @@ export function registerFeature<T extends object>(
     persistState,
     useStore: useFeatureStore,
   };
+  
+  featureStores.push(featureStore);
+  
+  return featureStore
 }
