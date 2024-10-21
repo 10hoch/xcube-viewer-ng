@@ -1,5 +1,6 @@
 import diff, { type Difference } from "microdiff";
-import { store, StoreState } from "@/store/store";
+
+import { store, StoreState } from "@/core";
 
 const indexStyle = "color:light-dark(lightblue, lightblue)";
 const typeStyle = "font-weight:bold";

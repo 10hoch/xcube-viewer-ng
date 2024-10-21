@@ -31,6 +31,7 @@ import {
   ThemeProvider,
 } from "@mui/material";
 
+import { configureLogging } from "@/core";
 import { Config } from "@/config";
 import { AppState } from "@/states/appState";
 import AuthWrapper from "@/components/AuthWrapper";
@@ -45,7 +46,6 @@ import ExportDialog from "./ExportDialog";
 import UserPlacesDialog from "./UserPlacesDialog";
 import UserLayersDialog from "./UserLayersDialog";
 import UserVariablesDialog from "./UserVariablesDialog";
-import { configureLogging } from "@/store";
 
 if (import.meta.env.DEV) {
   configureLogging();

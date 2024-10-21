@@ -4,4 +4,5 @@ export {
   type FeatureOptions,
   type FeatureStore,
   registerFeature,
+  activateFeatures,
 } from "./feature";

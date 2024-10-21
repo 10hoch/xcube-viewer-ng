@@ -7,6 +7,6 @@ export const setSidebarPanelId = (panelId: SidebarPanelId): void => {
     sidebarStore.getState().sidebarPanelId !== panelId
   ) {
     sidebarStore.setState({ sidebarPanelId: panelId });
-    sidebarStore.persistState();
+    sidebarStore.persist();
   }
 };

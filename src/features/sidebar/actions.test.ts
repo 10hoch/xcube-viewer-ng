@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach, vi } from "vitest";
 
-import { store } from "@/store/store";
+import { store } from "@/core";
 import { setSidebarPanelId } from "@/features/sidebar/actions";
 import { SidebarPanelId } from "@/features/sidebar/types";
 

@@ -1,4 +1,4 @@
-import { registerFeature } from "@/store";
+import { registerFeature } from "@/core";
 import { type SidebarState } from "./types";
 
 const initialState: SidebarState = {
