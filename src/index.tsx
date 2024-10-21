@@ -36,6 +36,7 @@ import "@fontsource/roboto/700.css";
 import "./index.css";
 
 import App from "@/connected/App";
+import { activateFeatures } from "@/core";
 import { Config } from "@/config";
 import {
   changeLocale,
@@ -56,6 +57,8 @@ Config.load().then(() => {
   });
   const middlewares = Redux.applyMiddleware(thunk, logger as Redux.Middleware);
   const store = Redux.createStore(appReducer, middlewares);
+
+  activateFeatures();
 
   const dispatch: Dispatch = store.dispatch;
 
